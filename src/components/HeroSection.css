@@ -1,0 +1,61 @@
+/* Full-Screen Dark Smoky Background */
+.hero-section {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(-45deg, #000000, #1a1a1a, #333333, #000000);
+    background-size: 300% 300%;
+    animation: smokyBG 10s infinite ease-in-out alternate;
+    display: flex;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+/* Background Animation */
+@keyframes smokyBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Blinking Heading */
+.glowing-text {
+    font-size: 4rem;
+    color: white;
+    animation: blinkText 1s infinite alternate;
+}
+
+/* Blinking Animation */
+@keyframes blinkText {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Subtitle Animation */
+.glowing-subtext {
+    font-size: 1.5rem;
+    color: #bbb;
+    animation: moveText 3s infinite ease-in-out alternate;
+}
+
+/* Moving Text Effect */
+@keyframes moveText {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+}
+
+/* Button with No Glow */
+.glowing-btn {
+    font-size: 1.3rem;
+    padding: 14px 30px;
+    border: none;
+    background: #444;
+    color: white;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.glowing-btn:hover {
+    background: #666;
+    transform: scale(1.05);
+}
