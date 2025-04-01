@@ -29,8 +29,29 @@ const Navbar = () => {
             Instrek Technology
           </motion.div>
 
+          {/* Navbar Links for Large Screens */}
+          <div className="collapse navbar-collapse">
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item">
+                <Link className="nav-link text-white fw-semibold" to="/">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white fw-semibold" to="/about">About</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white fw-semibold" to="/services">Services</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white fw-semibold" to="/blog">Blog</Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Hamburger Button */}
-          <button className="navbar-toggler border-0" onClick={() => setIsOpen(true)}>
+          <button 
+            className="navbar-toggler border-0" 
+            onClick={() => setIsOpen(true)}
+          >
             <FaBars className="text-white fs-3" />
           </button>
         </div>
@@ -54,7 +75,10 @@ const Navbar = () => {
         style={{ width: "300px", zIndex: 1050 }}
       >
         {/* Close Button */}
-        <button className="btn btn-outline-light btn-sm mb-4" onClick={() => setIsOpen(false)}>
+        <button 
+          className="btn btn-outline-light btn-sm mb-4" 
+          onClick={() => setIsOpen(false)}
+        >
           <FaTimes className="fs-4" />
         </button>
 

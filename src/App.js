@@ -15,8 +15,13 @@ function App() {
       
       {/* Apply margin-top to all content */}
       <div className="content">
+        <HeroSection />
+        <About/>
+        <Services/>
+        <Blog/>
+
         <Routes>
-          <Route path="/" element={<HeroSection />} />
+        
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/blog" element={<Blog />} />
